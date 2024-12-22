@@ -76,7 +76,7 @@ ros2 launch sllidar_ros2 sllidar_a1_launch.py
 ros2 launch wit_ros2_imu rviz_and_imu.launch.py
 ```
 
-### 5. Initiate the roobot state publisher
+### 5. Initiate the robot state publisher
 ```
 ros2 launch robot_description robot.launch.py
 ```
@@ -85,6 +85,7 @@ ros2 launch robot_description robot.launch.py
 ```
 ros2 launch nav2_bringup bringup_launch.py use_sim_time:=False map:=/home/ken/ros2_ws/src/robot_navigation/map/myroom_20240817.yaml params_file:=/home/ken/ros2_ws/src/robot_navigation/config/costmap_param.yaml 
 ```
+*Please change the map file name accordingly. The map file can be created by async SLAM mode.
 
 ### 7. Run rviz
 Open laptop on the same network with the raspberryPi and run:
