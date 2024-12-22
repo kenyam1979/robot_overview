@@ -4,7 +4,7 @@
 ![Robot2](./resources/2024-12-22%2015.40.12.jpg)
 
 ## Pre-requisit
-- ROS2 Hummble
+- ROS2 Humble
 
 ## Hardware
 
@@ -53,6 +53,9 @@
 
 
 ## How to run
+
+
+
 
 ### 1. Initiate the robot controller
 Ssh to RaspberryPi, and move to ros work space, then run:
