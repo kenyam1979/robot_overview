@@ -3,9 +3,6 @@
 ![Robot1](./resources/2024-12-22%2015.40.23.jpg)
 ![Robot2](./resources/2024-12-22%2015.40.12.jpg)
 
-## Pre-requisit
-- ROS2 Humble
-
 ## Hardware
 
 - 2-wheel differencial drive robot
@@ -27,7 +24,10 @@
 
 ## Software modules
 
-### Active
+### Pre-requisites
+- ROS2 Humble
+
+### Active modules
 - Robot controller
   - https://github.com/kenyam1979/robot_controller
 - Lidar
