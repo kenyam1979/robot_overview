@@ -67,7 +67,7 @@ ros2 run robot_controller motor_controller
 
 ### 2. (Optional) Initiate Teleo
 ```
-ros2 launch robot_controller teleop_launch.py config_filepath:=/home/ken/ros2_ws/src/robot_controller/config/ps3.config.yaml 
+ros2 launch robot_controller teleop_launch.py config_filepath:=$HOME/ros2_ws/src/robot_controller/config/ps3.config.yaml 
 ```
 
 ### 3. Initiate the Ridar 
@@ -87,7 +87,7 @@ ros2 launch robot_description robot.launch.py
 
 ### 6. Initiate Nav2
 ```
-ros2 launch nav2_bringup bringup_launch.py use_sim_time:=False map:=/home/ken/ros2_ws/src/robot_navigation/map/myroom_20240817.yaml params_file:=/home/ken/ros2_ws/src/robot_navigation/config/costmap_param.yaml 
+ros2 launch nav2_bringup bringup_launch.py use_sim_time:=False map:=$HOME/ros2_ws/src/robot_navigation/map/myroom_20240817.yaml params_file:=$HOME/ros2_ws/src/robot_navigation/config/costmap_param.yaml 
 ```
 *Please change the map file name accordingly. The map file can be created by async SLAM mode.
 
