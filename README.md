@@ -2,6 +2,7 @@
 
 ![Robot1](./resources/2024-12-22%2015.40.23.jpg)
 ![Robot2](./resources/2024-12-22%2015.40.12.jpg)
+![Simulation](./resources/Screenshot%20from%202025-01-26%2020-21-48.png)
 
 ## Hardware
 
