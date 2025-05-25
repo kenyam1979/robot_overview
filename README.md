@@ -29,8 +29,8 @@
 - ROS2 Humble
 
 ### Active modules
-- Robot controller
-  - https://github.com/kenyam1979/robot_controller
+- Robot controller2
+  - https://github.com/kenyam1979/robot_controller2
 - Lidar
   - https://github.com/Slamtec/sllidar_ros2
 - IMU
@@ -44,30 +44,29 @@
 ### Work in progres
 - Autonomous Emergency Braking
   - https://github.com/kenyam1979/robot_aeb
-
 - Camera publisher
   - https://github.com/kenyam1979/robot_camera
 
 ### Discontinued
 - Interface definition
   - https://github.com/kenyam1979/robot_interfaces
+- Robot controller
+  - https://github.com/kenyam1979/robot_controller
 
 
 ## How to run
-
-
 
 
 ### 1. Initiate the robot controller
 Ssh to RaspberryPi, and move to ros work space, then run:
 ```
 sudo pigpiod
-ros2 run robot_controller motor_controller
+ros2 launch robot_controller2 robot_controller2.launch.py
 ```
 
 ### 2. (Optional) Initiate Teleo
 ```
-ros2 launch robot_controller teleop_launch.py config_filepath:=$HOME/ros2_ws/src/robot_controller/config/ps3.config.yaml 
+ros2 launch robot_controller2 teleop.launch.py config_filepath:=$HOME/ros2_ws/src/robot_controller2/bringup/config/ps3.config.yaml 
 ```
 
 ### 3. Initiate the Ridar 
@@ -82,7 +81,7 @@ ros2 launch wit_ros2_imu rviz_and_imu.launch.py
 
 ### 5. Initiate the robot state publisher
 ```
-ros2 launch robot_description robot.launch.py
+ros2 launch robot_description robot_ign.launch.py
 ```
 
 ### 6. Initiate Nav2
@@ -96,3 +95,20 @@ Open laptop on the same network with the raspberryPi and run:
 ```
 ros2 launch robot_description display.launch.py
 ```
+
+## How to run simulation (Ignition)
+
+### 1. Initiate simulator
+```
+ros2 launch robot_description test_ign.launch.py
+```
+
+### 2. (Optional) Initiate Teleo
+```
+ros2 launch robot_controller2 teleop.launch.py config_filepath:=$HOME/ros2_ws/src/robot_controller2/bringup/config/ps3.config.yaml 
+```
+
+### 3. Initiate Nav2
+```
+ros2 launch nav2_bringup bringup_launch.py use_sim_time:=True map:=$HOME/ros2_ws/src/robot_navigation/map/myroom_20250208.yaml params_file:=$HOME/ros2_ws/src/robot_navigation/config/nav2_params.yaml
+``` 
